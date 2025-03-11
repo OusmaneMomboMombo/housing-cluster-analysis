@@ -33,10 +33,32 @@ The final dataset (`FUSION.csv`) consists of **4117 observations** with **22 col
 - **age**: Current year minus the year of construction.
 - **sqft_grade_interaction**: Interaction between living space (`sqft_living`) and the grade of the house.
 
-Key features include:
-- **House-related features**: Price, bedrooms, bathrooms, square footage, floors, waterfront, view, condition, grade.
-- **Location-related features**: Latitude (`lat`), longitude (`long`).
-- **Time-related features**: Year built (`yr_built`), year renovated (`yr_renovated`), age.
+The dataset contains the following features:
+
+### House-Related Features
+- `price`: Sale price of the house.
+- `bedrooms`: Number of bedrooms.
+- `bathrooms`: Number of bathrooms.
+- `sqft_living`: Square footage of the living area.
+- `sqft_lot`: Square footage of the lot.
+- `floors`: Number of floors.
+- `waterfront`: Whether the house has a waterfront view (binary).
+- `view`: Quality of the view (ordinal scale).
+- `condition`: Condition of the house (ordinal scale).
+- `grade`: Grade of the house (ordinal scale).
+- `yr_built`: Year the house was built.
+- `yr_renovated`: Year the house was last renovated (if applicable).
+
+### Location-Related Features
+- `lat`: Latitude of the property.
+- `long`: Longitude of the property.
+
+### Time-Related Features
+- `age`: Age of the house (calculated as the current year minus `yr_built`).
+- `sqft_grade_interaction`: Interaction term between `sqft_living` and `grade`.
+
+### Macroeconomic Feature
+- `MORTGAGE30US`: Average 30-year mortgage rate in the United States.
 
 
 ## Files in the Repository
